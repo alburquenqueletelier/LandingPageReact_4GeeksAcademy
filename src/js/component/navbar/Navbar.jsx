@@ -8,7 +8,7 @@ export const NavBar = (props) => {
 			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 				<Container>
 					<Navbar.Brand className="" href="#">
-						React-Bootstrap
+						{props.title}
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse
@@ -17,13 +17,13 @@ export const NavBar = (props) => {
 						<Nav>
 							<Nav.Link href="#Home">Home</Nav.Link>
 							<Nav.Link eventKey={2} href="#about">
-								About
+								{props.opt1}
 							</Nav.Link>
 							<Nav.Link eventKey={3} href="#services">
-								Services
+								{props.opt2}
 							</Nav.Link>
 							<Nav.Link eventKey={4} href="#contact">
-								Contact
+								{props.opt3}
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
@@ -31,4 +31,15 @@ export const NavBar = (props) => {
 			</Navbar>
 		</>
 	);
+};
+
+NavBar.propsTypes = {
+	title: PropTypes.string,
+	opt1: PropTypes.string,
+	opt2: PropTypes.string,
+	opt3: PropTypes.string,
+	// url1: PropTypes.string,
+	// url2: PropTypes.string,
+	// url3: PropTypes.string,
+	// url4: PropTypes.string,
 };

@@ -6,15 +6,16 @@ export const Presentation = (props) => {
 	return (
 		<>
 			<div className="bg-light border-radius p-4">
-				<h1>hola</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Atque cumque distinctio esse excepturi facilis, quos
-					voluptates architecto qui quis nesciunt minima perspiciatis
-					illum quasi nobis nam pariatur natus aut velit.
-				</p>
-				<Button>Click Me</Button>
+				<h1>{props.title}</h1>
+				<p>{props.text}</p>
+				<Button>{props.buttonText}</Button>
 			</div>
 		</>
 	);
+};
+
+Presentation.propsTypes = {
+	title: PropTypes.string,
+	text: PropTypes.string,
+	buttonText: PropTypes.string,
 };
