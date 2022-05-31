@@ -1,0 +1,5 @@
+1. Div contenedor
+2. Navbar fija arriba
+3. encabezado (div con h1, texto y botón)
+4. Card box x4
+5. footer con texto
